@@ -33,8 +33,33 @@
         </div>
 
         <script>
+            const width = document.getElementById("graph").offsetWidth
+            const height = document.getElementById("graph").offsetHeight
+            const x_middle = width / 2
+            const y_middle = height / 2
+            const r = min(width, height) * 0.4
+
             const stage = acgraph.create("graph")
-            stage.rect(5, 5, 50, 50)
+
+            //drawing vertical arrow
+            stage.moveTo(x_middle, 0)
+            stage.lineTo(x_middle, height)
+
+            //drawing horizontal arrow
+            stage.moveTo(0, y_middle)
+            stage.lineTo(width, y_middle)
+
+            //drawing rectangle
+            stage.moveTo(x_middle, y_middle - r / 2)
+            stage.lineTo(x_middle + r, y_middle - r / 2)
+            stage.lineTo(x_middle + r, y_middle)
+
+            //drawing arc
+            stage.arcTo(r, r, 0, 90)
+
+            //drawing triangle
+            stage.moveTo(x_middle, y_middle + r)
+            stage.lineTo(x_middle - r / 2, y_middle)
         </script>
     </body>
 </html>
