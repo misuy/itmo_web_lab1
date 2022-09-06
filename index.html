@@ -1,7 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+        <title>Lab1</title>
+        <script src="https://cdn.anychart.com/releases/8.11.0/js/graphics.min.js"></script>
+    </head>
     <body>
-        <p>hii!!</p>
+        <div class="header">
+            Передрий Михаил Сергеевич
+        </div>
+        <div class="content">
+            <div class="graph" id="graph" style="width: 100px; height: 100px">
+                
+            </div>
+
+            <div class="parameter_selectors">
+                <div class="r_selector">
+
+                </div>
+
+                <div class="x_selector">
+
+                </div>
+
+                <div class="y_selector">
+
+                </div>
+            </div>
+
+            <div class="results_table">
+
+            </div>
+        </div>
+
+        <script>
+            const stage = acgraph.create("graph")
+            stage.rect(5, 5, 50, 50)
+        </script>
     </body>
 </html>
