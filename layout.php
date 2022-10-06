@@ -169,7 +169,7 @@
                                 <div class="graph" id="graph"></div>
                             </td>
                             <td class="holder selectors_holder" width="50%">
-                                <form id="xyr_form" method="POST" action="add_attempt.php">
+                                <form id="xyr_form" method="POST" action="/~s335120/itmo_web_lab1/add_attempt.php">
                                     <table class="selectors_table" cellpadding="0" cellspacing="0" width="100%">
                                         <tr class="x_selector_row">
                                             <td>
