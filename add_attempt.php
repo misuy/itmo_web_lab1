@@ -14,6 +14,6 @@
     $id = $dbManager->getIdForNewAttempt();
     $dbManager->addAttempt($id, $x, $y, $r, $result, $startOfExecutionTime);
 
-    header("Location: http://127.0.0.1:1111/?attemptId={$id}");
+    header("Location: /?attemptId={$id}");
     exit();
 ?>
