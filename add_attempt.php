@@ -9,11 +9,14 @@
     if (isset($_POST["x"])) { $x = floatval($_POST["x"]); }
     if (isset($_POST["y"])) { $y = floatval($_POST["y"]); }
     if (isset($_POST["r"])) { $r = floatval($_POST["r"]); }
-    $result = checkAttempt($x, $y, $r);
-    $dbManager = new DbManager();
-    $id = $dbManager->getIdForNewAttempt();
-    $dbManager->addAttempt($id, $x, $y, $r, $result, $startOfExecutionTime);
-
-    header("Location: https://se.ifmo.ru/~s335120/itmo_web_lab1/?attemptId={$id}");
+    if (($x != null) & ($y != null) & ($r != null))
+    {
+        $result = checkAttempt($x, $y, $r);
+        $dbManager = new DbManager();
+        $id = $dbManager->getIdForNewAttempt();
+        $dbManager->addAttempt($id, $x, $y, $r, $result, $startOfExecutionTime);
+        header("Location: https://se.ifmo.ru/~s335120/itmo_web_lab1/?attemptId={$id}");
+    }
+    else header("Location: https://se.ifmo.ru/~s335120/itmo_web_lab1/");
     exit();
 ?>
