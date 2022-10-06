@@ -14,6 +14,6 @@
     $id = $dbManager->getIdForNewAttempt();
     $dbManager->addAttempt($id, $x, $y, $r, $result, $startOfExecutionTime);
 
-    header("Location: /itmo_web_lab1/?attemptId={$id}");
+    header("Location: https://se.ifmo.ru/~s335120/itmo_web_lab1/?attemptId={$id}");
     exit();
 ?>
