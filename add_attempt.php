@@ -9,6 +9,9 @@
     if (isset($_POST["x"])) { $x = floatval($_POST["x"]); }
     if (isset($_POST["y"])) { $y = floatval($_POST["y"]); }
     if (isset($_POST["r"])) { $r = floatval($_POST["r"]); }
+    echo $x;
+    echo $y;
+    echo $r;
     if (($x != null) & ($y != null) & ($r != null))
     {
         $result = checkAttempt($x, $y, $r);
