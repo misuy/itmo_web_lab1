@@ -222,7 +222,7 @@
                                                         <div id="y_label">Y:</div>
                                                     </td>
                                                     <td>
-                                                        <input type="text" id="y_selector" name="y" onchange="validateY()">
+                                                        <input type="text" id="y_selector" name="y" onchange="validateY()" maxlength="14">
                                                     </td>
                                                 </table>
                                             </td>
